@@ -52,7 +52,7 @@ console.log(letter);
 
 
 // --------------------------------------
-// Exercise 7 - Replace
+// Exercise 7 - Replace.
 
 const fact = "You are learning javascript!";
 
