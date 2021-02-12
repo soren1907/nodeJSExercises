@@ -13,10 +13,19 @@ console.log(letters[1]);
 
 const friends = [];
 
+// What a lonely array. Add at least 3 friend objects to it.  
+
 friends.push("one");
 friends.push("two");
 friends.push("three");
-// What a lonely array. Add at least 3 friend objects to it.  
+//lavet forkert tilføjer strings og ikke objekter
+
+const jamie = {name: "Jamie"};
+friends.push(jamie);
+//^gør det eks. på denne måde og tilføj så 2 mere
+
+friends.push({name: "Thea"});
+//^eller sådan. adskil objekter med {} og komma
 
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
@@ -37,6 +46,7 @@ const diet = ["tomato", "cucumber", "rocket"];
 // You are a programmer. In one line (one statement) insert hamburger, soda and pizza between the elements cucumber and rocket
 
 diet.splice(2, 0, "hamburger","soda","pizza");
+console.log(diet)
 
 // --------------------------------------
 // Exercise 5 - Remove element
@@ -54,20 +64,29 @@ diet.pop(); //fjerner sidste element i et array
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 
 const dinnerTray = [...diet];
+//^det jeg afleverede. Spread operator
+//fjerner elementerne og sætter dem i et nyt array.. Så ikke en reference
+
+const dinnerTrayTwo = diet.splice();
+// ^ en anden måde fra undervisning.. 
+
+
 // dinnerTray = diet - Laver endnu en reference til samme array og er derfor ikke en kopi
 
 // --------------------------------------
 // Exercise 7 - For loop
 
-const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
+const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h",];
 
 // log every second char in the array starting from b
 
 console.log('Exercise 7:')
 
-for(let i = 1; i < lettersExpanded.length; i += 2){
+for (let i = 1; i < lettersExpanded.length; i += 2){
     console.log(lettersExpanded[i]);
 }
+
+//mellemrum efter for gør det mere "readable" - fra undervisning
 
 
 // --------------------------------------
@@ -82,7 +101,7 @@ const discardedNumbers = [];
 
 numbers.forEach(function(number){
 
-    if(number > 6 || number < 0){
+    if (number > 6 || number < 0){
         console.log(number);
     } else{
         discardedNumbers.push(number);

@@ -16,8 +16,8 @@ console.log(value);
 
 // Create an object that has your name and age. 
 
-const person = {"name": "Søren Raben", "age": 22}
-
+const person = {name: "Søren Raben", age: 22}
+console.log(person)
 // --------------------------------------
 // Exercise 3 - Add a property 
 
@@ -36,6 +36,7 @@ const thisSong = {"description": "The best song in the world."}
 
 delete thisSong.description;
 thisSong.about = "Just a tribute.";
+console.group(thisSong)
 
 // --------------------------------------
 

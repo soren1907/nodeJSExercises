@@ -1,0 +1,22 @@
+{
+    "footballs":[
+        {
+            "id": 1,
+            "size": 5,
+            "color": "blue",
+            "weight": 410
+        },
+        {
+            "id": 2,
+            "size": 4,
+            "color": "white",
+            "weight": 320
+        },
+        {
+            "id": 3,
+            "size": 5,
+            "color": "white",
+            "weight": 405
+        }
+    ]
+}
