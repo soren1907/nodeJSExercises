@@ -3,7 +3,8 @@ const app = express();
 
 //https://www.youtube.com/watch?v=pKd0Rpw7O48 <- inspiration hentet fra her
 
-//Arbejder med data fra design af RESTful API.  
+//Arbejder med data fra design af RESTful API.
+//Design af rest api ligger i samme mappe "footballAPI.json"  
 const footballs = [ 
     {
         "id": 1,
