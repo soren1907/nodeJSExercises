@@ -1,0 +1,27 @@
+<collection>: anime_names
+
+anime names fields:
+
+    |-------------------|
+    | id | nm | rnaking |
+
+^ each row is an object
+we always send back objects
+
+
+GET 
+    endpoints:
+    GET /anime_name
+    GET /anime_name/id      /id  <- path variable   brug ikke : da vi ikke implementere..
+                            i express vil man gøre det, men behøver ikke i design
+
+POST 
+    /anime_names    vil ikke bruge id da client ikke skal bestemme det..
+                    creates a new resource
+
+PATCH
+    /anime_names/id     brug næsten altid /id, da man ikke vil ændre alle(som regel)
+                        bruges til at opdatere batch
+
+DELETE
+    /anime_names/id     man vill ikke slette alting. brug id
