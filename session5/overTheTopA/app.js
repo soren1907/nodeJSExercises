@@ -42,11 +42,11 @@ app.delete("/anime_names/:id", (req, res) => {
     res.send({});
 });
 
-app.listen(8080, (error) => {
+app.listen(8085, (error) => {
     if (error) {
         console.log(error);
     } else{
-        console.log("server is running on port", 8080)
+        console.log("server is running on port", 8085)
     }
 });
 
