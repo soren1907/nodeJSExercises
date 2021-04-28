@@ -36,14 +36,18 @@ app.get("/candle", (req, res) => {
 })
 
 app.get("/catfacts", (req, res) => {
-    res.sendFike(__dirname)
+    res.sendFile(__dirname + "/public/catfacts/catfacts.html")
 })
 
-const port = process.env.PORT || 8082
+const port = process.env.PORT || 8080
 
-app.listen(port, (error) => {
+const server = app.listen(port, (error) => {
     if (error) {
         console.log(error);
     }
-    console.log("server is running on port", port)
+    console.log("server is running on port", server.address().port);
 });
+
+
+
+

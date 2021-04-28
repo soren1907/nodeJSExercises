@@ -1,0 +1,43 @@
+where do we put data?
+mySQL: we have a tabel
+mongodb: we have collection
+
+[
+    {
+        key: 123
+    },
+    {
+        key: "now as as string"
+        anotherKey: "456"
+    }
+    {
+    }
+]
+
+
+mySQL
+-----
+great for data that needs to adhere to a rigid schema, structured data
+great for when the business requiremtns are not pront to change
+enforce checks of data type etc. and fails on the db level.
+Can give quite a head ache when trying to split up / shard / scale
+
+
+mongodb
+-------
+flexible -> repid prototyping.
+great for javascript (read node) applications cause you can save -
+JS objecs/json directly to mongodb and read it as such.
+beware that it puts a lot of pressure on the developer being good, a lot of things - 
+need to happen in the app layer. 
+it is easy to use but easier to really mess up your data in a big way.
+It is amazing for sharding /clustering
+
+can you combine them? yes
+mysql - for all the business data
+mongodb - for all the logs
+
+
+
+
+

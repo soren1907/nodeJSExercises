@@ -1,0 +1,28 @@
+db.createCollection("brewery")
+
+
+db.brewery.insert({Brand: "Carlsberg"})
+
+db.brewery.insert({Brand: "Tuborg"})
+
+db.brewery.insert({Brand: "Aarhus øl"})
+
+db.brewery.insert({Brand: "IPA"})
+
+db.brewery.insert({Brand: "Summer"})
+
+db.brewery.insert({Brand: "DP"})
+
+
+
+db.brewery.update({Brand: "Tuborg"},{$set: {Brand: "Tuborgss"}})
+
+db.brewery.update({Brand: "Carlsberg"},{$set: {Brand: "Carlsbergsss"}})
+
+db.brewery.update({Brand: "Summer"},{$set: {Brand: "Winther"}})
+
+
+
+db.brewery.deleteOne({Brand:"IPA"})
+
+db.brewery.deleteOne({Brand:"DP"})

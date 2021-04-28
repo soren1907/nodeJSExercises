@@ -1,0 +1,13 @@
+C
+    insert
+R
+    find
+u
+    update
+D
+    deleteOne / deleteMany /remove
+
+
+    create a beer collection / alernatively create a brewery collection add 6 beers
+    update 3
+    delete 2

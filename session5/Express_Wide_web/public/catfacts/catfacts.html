@@ -8,11 +8,86 @@
 </head>
 <body>
     
+    <h1>Cat fact</h1>
+    <div id="cat-facts"> </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+
         //https://cat-fact.herokuapp.com/facts/random
         //todo: use ajax in jquery that we included above to call cat facts through the url above
 
+        //call /pub with fetch
+        fetch("/pub?money=1000")
+        .then(response => response.json())
+        .then(result => console.log(result));
+
+
+
+
+        //not sure what this, he showed us, is
+        // const window = {
+        //     document: 1
+        // }
+        // const document = window.document;
+        // document
+
+
+
+        // function getCatFact() {
+
+        //     $.get(`https://cat-fact.herokuapp.com/facts/random?amount=5`, (response) => {
+        
+        //         const catFactDiv = document.getElementById("cat-facts");
+                
+        //         response.map(fact => {
+
+        //             //catFactParagraph.innerText = fact.text;
+
+        //             if(fact.status.verified){
+        //                 const nestedListItem = document.createElement("li");
+        //                 nestedListItem.innerText = fact.text;
+        //                 catFactDiv.append(nestedListItem)
+        //             }
+                   
+
+        //         });
+        //     });
+        // }
+        // getCatFact();
+
+
+
+        // $.get("https://cat-fact.herokuapp.com/facts/random", (data) => {
+            
+        //     //$("#cat-fact").text(data.text);
+        // });
+
+
+
+        //convert the ajax call to a fetch using promises and i hte end show the fact on the page
+        // fetch("https://cat-fact.herokuapp.com/facts/random")
+        // .then(response => response.json())
+        // .then(result => {
+        //     const catFactDiv = document.getElementById("cat-facts");
+        //     catFactDiv.innerText = result.text;
+        // })
+
+
+        // Both method above and under have same purpose. but chose one way and stick with it
+
+
+        // convert the fetch to cat facts to async await
+        (async function () {
+            const response = await fetch("https://cat-fact.herokuapp.com/facts/random");
+            const result = await response.json();
+            const catFactDiv = document.getElementById("cat-facts");
+            catFactDiv.innerText = result.text;
+        })()
+
+     
+
+    
     </script>
 
 
